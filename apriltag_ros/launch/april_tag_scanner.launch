@@ -1,23 +1,18 @@
 <launch>
   <arg name="launch_prefix" default="" /> <!-- set to value="gdbserver localhost:10000" for remote debugging -->
   <arg name="node_namespace" default="apriltag_ros_continuous_node" />
-<!--   <arg name="camera_name" default="/camera/color" />
-  <arg name="camera_frame" default="camera_color_optical_frame" /> -->
-  <arg name="camera_name" default="/camera_up/color" />
-  <arg name="camera_frame" default="camera_up_color_optical_frame" />
+  
+  <arg name="camera_name" default="/camera/color" />
+  <arg name="camera_frame" default="camera_color_optical_frame" />
   <arg name="image_topic" default="image_rect_color" />
-<!--   <remap from="turtlebot_teleop_keyboard" to="teleop"/>
-  <arg name="camera_name" default="/camera" />
-  <arg name="camera_frame" default="camera" />
-  <arg name="image_topic" default="image" />
-  <remap from="chatter" to="hello"/> -->
 
-  <!-- <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="1 0 0 0 0 0 1 map camera 100" />  -->
+  
+
+  <!-- <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="1 0 0 0 0 0 1 map camera 100" /> -->
 
   <!-- Set parameters -->
   <rosparam command="load" file="$(find apriltag_ros)/config/settings.yaml" ns="$(arg node_namespace)" />
-  <!-- <rosparam command="load" file="$(find apriltag_ros)/config/tags.yaml" ns="$(arg node_namespace)" /> -->
-  <rosparam command="load" file="$(find apriltag_ros)/config/tags_franka.yaml" ns="$(arg node_namespace)" />
+  <rosparam command="load" file="$(find apriltag_ros)/config/tag_scanner.yaml" ns="$(arg node_namespace)" />
   
   <node pkg="apriltag_ros" type="apriltag_ros_continuous_node" name="$(arg node_namespace)" clear_params="true" output="screen" launch-prefix="$(arg launch_prefix)" >
     <!-- Remap topics from those used in code to those on the ROS network -->

@@ -1,5 +1,6 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 2.8.3)
 project(apriltag_ros)
+set(CMAKE_BUILD_TYPE Release)
 
 find_package(catkin REQUIRED COMPONENTS
   cmake_modules
@@ -30,13 +31,7 @@ link_directories(${apriltag_LIBDIR})
 #  Release        : w/o debug symbols, w/ optimization
 #  RelWithDebInfo : w/ debug symbols, w/ optimization
 #  MinSizeRel     : w/o debug symbols, w/ optimization, stripped binaries
-# We default to 'Release' if none was specified
-IF(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-  MESSAGE(STATUS "Setting build type to 'Release' as none was specified.")
-  SET(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the build type" FORCE)
-  SET_PROPERTY(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Coverage" "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
-ENDIF()
-
+# set(CMAKE_BUILD_TYPE Release)
 
 set(CMAKE_CXX_STANDARD 11)
 add_compile_options("-O3" "-funsafe-loop-optimizations" "-fsee" "-funroll-loops" "-fno-math-errno" "-funsafe-math-optimizations" "-ffinite-math-only" "-fno-signed-zeros")
@@ -124,6 +119,11 @@ target_link_libraries(${PROJECT_NAME}_single_image_server_node ${PROJECT_NAME}_s
 add_executable(${PROJECT_NAME}_single_image_client_node src/${PROJECT_NAME}_single_image_client_node.cpp)
 add_dependencies(${PROJECT_NAME}_single_image_client_node ${PROJECT_NAME}_generate_messages_cpp)
 target_link_libraries(${PROJECT_NAME}_single_image_client_node ${PROJECT_NAME}_common ${catkin_LIBRARIES})
+
+add_executable(pub_hand_marker_node src/pub_hand_marker.cpp)
+add_dependencies(pub_hand_marker_node ${PROJECT_NAME}_generate_messages_cpp)
+target_link_libraries(pub_hand_marker_node ${catkin_LIBRARIES})
+
 
 
 #############

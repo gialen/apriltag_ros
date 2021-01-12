@@ -1,0 +1,106 @@
+# # Definitions of tags to detect
+#
+# ## General remarks
+#
+# - All length in meters
+# - Ellipsis (...) signifies that the previous element can be repeated multiple times.
+#
+# ## Standalone tag definitions
+# ### Remarks
+#
+# - name is optional
+#
+# ### Syntax
+#
+standalone_tags:
+  [
+    {id: 10, size: 0.042},
+    {id: 11, size: 0.042}
+
+  ]
+
+# ## Tag bundle definitions
+# ### Remarks
+#
+# - name is optional
+# - x, y, z have default values of 0 thus they are optional
+# - qw has default value of 1 and qx, qy, qz have default values of 0 thus they are optional
+#
+# ### Syntax
+#
+# tag_bundles:
+#   [
+#     {
+#       name: 'ciccio',
+#       layout:
+#         [
+#           # {id: 10, size: 0.04, x: 0, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 11, size: 0.04, x: 0.05, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+
+#           # {id: 10, size: 0.024, x: 0, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 11, size: 0.024, x: 0.03, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 12, size: 0.024, x: 0, y: -0.03, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 13, size: 0.024, x: 0.03, y: -0.03, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+
+#           # {id: 10, size: 0.015, x: 0, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 11, size: 0.015, x: 0.02, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 12, size: 0.015, x: 0, y: -0.02, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 13, size: 0.015, x: 0.02, y: -0.02, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+
+#           # {id: 10, size: 0.012, x: 0, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 11, size: 0.012, x: 0.015, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 12, size: 0.012, x: 0, y: -0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 13, size: 0.012, x: 0.015, y: -0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 14, size: 0.012, x: 0, y: -0.03, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 15, size: 0.012, x: 0.015, y: -0.03, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 16, size: 0.012, x: 0.03, y: -0.03, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 17, size: 0.012, x: 0.03, y: -0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 18, size: 0.012, x: 0.03, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+
+
+#           # {id: 10, size: 0.012, x: -0.015, y: 0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 11, size: 0.012, x: 0, y: 0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 12, size: 0.012, x: -0.015, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 14, size: 0.012, x: -0.015, y: -0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 13, size: 0.012, x: 0, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 15, size: 0.012, x: 0, y: -0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 16, size: 0.012, x: 0.015, y: -0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 17, size: 0.012, x: 0.015, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 18, size: 0.012, x: 0.015, y: 0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+
+#           #EE yumi
+#           # {id: 10, size: 0.012, x: 0, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 11, size: 0.012, x: 0.015, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 12, size: 0.012, x: 0, y: -0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 13, size: 0.012, x: 0.015, y: -0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 14, size: 0.012, x: 0, y: -0.03, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 15, size: 0.012, x: 0.015, y: -0.03, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 16, size: 0.012, x: 0.03, y: -0.03, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 17, size: 0.012, x: 0.03, y: -0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 18, size: 0.012, x: 0.03, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 19, size: 0.012, x: 0, y: -0.045, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 20, size: 0.012, x: 0.015, y: -0.045, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 21, size: 0.012, x: 0.03, y: -0.045, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 22, size: 0.012, x: 0.045, y: -0.045, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 23, size: 0.012, x: 0.045, y: -0.03, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 24, size: 0.012, x: 0.045, y: -0.015, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 25, size: 0.012, x: 0.045, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+
+#           # mobilebase
+#           # {id: 10, size: 0.027, x: -0.033, y: 0.033, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 11, size: 0.027, x: 0, y: 0.033, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 12, size: 0.027, x: -0.033, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 14, size: 0.027, x: -0.033, y: -0.033, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 13, size: 0.027, x: 0, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 15, size: 0.027, x: 0, y: -0.033, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 16, size: 0.027, x: 0.033, y: -0.033, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 17, size: 0.027, x: 0.033, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+#           # {id: 18, size: 0.027, x: 0.033, y: 0.033, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+         
+         
+#         ]
+#     },
+#   ]
+# tag_bundles:
+#   [
+#   ]

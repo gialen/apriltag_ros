@@ -55,9 +55,7 @@ namespace apriltag_ros
 class ContinuousDetector: public nodelet::Nodelet
 {
  public:
-  ContinuousDetector() = default;
-  ~ContinuousDetector() = default;
-
+   ContinuousDetector();
   void onInit();
 
   void imageCallback(const sensor_msgs::ImageConstPtr& image_rect,
